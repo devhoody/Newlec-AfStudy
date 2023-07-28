@@ -8,12 +8,11 @@
 // 키가 150이 넘으면 YES를 틀리면 NO를 출력하는 프로그램을 작성하세요.
 
 // 밑에 코드 작성해주세요.
-let age = prompt("나이를 입력해주세요");
-
-if(age >= 150)
-    console.log("YES")
-else 
-    console.log("NO")
+var use = window.prompt("키를 입력하세요");
+if(use>=150)
+console.log("yes");
+else
+  console.log("no");
 
 // 입력받는 메소드처럼 배우지 않은 메소드가 필요하시면 꼭 검색해서 찾는 버릇 들이세요!!
 
