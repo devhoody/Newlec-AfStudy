@@ -4,9 +4,9 @@
 // name변수를 선언해서 본인 이니셜을 넣고, 2.temp에 $와 + 를 이용해서 두 줄을 넣으세요!
 // temp = 'My name is <<이름넣기>>';
 {
-// const name = "JDH"
-// let temp = `My name is ${name}`
-// console.log(temp)
+const name = "JDH"
+let temp = `My name is ${name}`
+console.log(temp)
 }
 
 // 문제 1-1
