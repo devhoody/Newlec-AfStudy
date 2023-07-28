@@ -12,6 +12,16 @@
 // String.raw 메소드 이용해서 "넣기
     let temp = String.raw`\My name is "${name}\"`;
     console.log(temp);
+    let name ="이송희";
+    let temp ="my name is '+name+'";
+    let temp1 =`my name is ${name}`;
+    console.log(temp1);
+
+// 문제 1-1
+// String.raw 메소드 이용해서 .넣기
+let temp2 =String.raw`my name \n
+is ${name}`;
+console.log(temp2);
 
 // 문제 2 
 // kor1과 kor2 변수에 kors의 값을 넣어 20,40을 출력하세요!
@@ -21,3 +31,6 @@ let kors = [[20, 40, 30], [40, 30]];
 let [[kor1, kor2, ]] = kors;
 console.log(kor1, kor2)
 
+ let kors = [[20, 40, 30], [40, 30]];
+ let [[kor1,kor2]]=kors;
+ console.log(kor1,kor2)
