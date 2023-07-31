@@ -19,6 +19,9 @@
 // 문제 2 
 // kor1과 kor2 변수에 kors의 값을 넣어 20,40을 출력하세요!
 // 단, 코드는 console.log()포함 두줄로 입력해주세요!
+ let kors = [[20, 40, 30], [50, 30]];
+ let [[kor1,kor2],[kor3]]=kors;
+ console.log(kor1,kor2,kor3);
 {
     // 노씨
     let kors = [[20, 40, 30], [40, 30]];
