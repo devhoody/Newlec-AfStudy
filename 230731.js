@@ -27,7 +27,7 @@
     // 콘솔로 출력하세요
     let numbers = [5, 6, 2, 3, 7];
 
-    let max = Math.max.call(undefined,...numbers);
+    let max = Math.max.call(null, ...numbers); // null 자리는 가져올 함수가 없을때 null이나 undefined를 넣는다.
     let max1 = Math.max.apply(undefined,numbers);
     // let min = Math.min.apply(null,numbers);
 
@@ -54,12 +54,19 @@
     sum2(1, 2, 3, 4);
 
     //3. 숫자배열, 문자배열 각각 만들어서 하나의 1차배열로 한번에 출력하기
-    let nums = [1, 3, 5];
-    let str = ['깃허브','무서워', ...nums];
+    let str = ['깃허브','무서워'];
+    let nums = [1, 3, 5, ...str];
 
-    // let numsStr = nums.concat(str);
-    // console.log(numsStr);
+    let nums1 = [1, 3, 5];
+    let str1 = ['깃허브','무서워'];
+    
     console.log(str)
+    
+    let numsStr = nums1.concat(str1);
+    console.log(numsStr);
+
+    nums1.push.apply(nums1, str1);
+    console.log(nums1);
 
 }
 
