@@ -29,3 +29,4 @@ if (height >= 150){
 } else {
   console.log("NO");
 }
+
