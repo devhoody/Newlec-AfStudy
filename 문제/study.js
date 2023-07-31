@@ -20,6 +20,3 @@
     let char = ['a', 'b', 'c', 'd', 'e', ...nums];
     console.log(char)
 }
-{
-    //4. 
-}
