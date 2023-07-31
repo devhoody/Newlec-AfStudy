@@ -1,4 +1,8 @@
 // 230726 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/develop
 // 문제 1
 // 유주는 놀이공원 아르바이트 중입니다. 그런데 놀이기구마다 키 제한이 있습니다.
 // 유주가 담당하는 놀이기구는 키가 150cm 이상만 탈 수 있습니다.
@@ -7,11 +11,12 @@
 // 키가 150이 넘으면 YES를 틀리면 NO를 출력하는 프로그램을 작성하세요.
 
 // 밑에 코드 작성해주세요.
-var use = window.prompt("키를 입력하세요");
-if(use>=150)
-console.log("yes");
-else
-  console.log("no");
+let height = prompt("키를 입력해주세요");
+
+if(height >= 150)
+    console.log("YES")
+else 
+    console.log("NO")
 
 //대훈오빠 답 감사합니다(_ _)
 

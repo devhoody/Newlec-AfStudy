@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
+    "liveServer.settings.port": 5501
+=======
     "liveServer.settings.port": 5501,
     "livePreview.defaultPreviewPath": "/index.html"
+>>>>>>> 7a6be5b56f5a6a9bc30be9e5e9a8c6bf72730b65
 }
