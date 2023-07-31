@@ -1,11 +1,12 @@
+// 대훈 풀이!!
 {
     //1번 문제 - 민아
     // 아래의 코드에서 c(a, b)의 값을 예상해서 적어보세요.
 
-    var a = [1, 2, 3];
-    var b = ["you", "are"];
+    let a = [1, 2, 3];
+    let b = ["you", "are"];
 
-    var c = function (a, b) {
+    let c = function (a, b) {
     console.log([[...a], ...[...b]][1]);
     };
     c(a, b);
@@ -15,10 +16,11 @@
     // 예측한 정답은 여기에 기입~~~
     }
 
+
     //2번 문제 - 민아
     // 아래 numbers에서 Math.max, Math.min, apply를 이용하여 최대값, 최소값을
     // 콘솔로 출력하세요
-    var numbers = [5, 6, 2, 3, 7];
+    let numbers = [5, 6, 2, 3, 7];
 
     // 여기에 코드 적기~
     console.log(Math.max(...numbers));
@@ -105,13 +107,9 @@
     let nums = [1, 2, 45, 60, 78, 27];
     let nums1 = [3, 5, 8, ...nums];
 
-    //[3,5,8,1,2,45,60,78,27]
-
     function print([x, y, ...aa]) {
     console.log(x, y, aa[2], aa.length, arguments.length, arguments[2]);
     };
-
-    //3, 5, 8, 
 
     print(nums1);
 }
