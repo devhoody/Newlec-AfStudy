@@ -14,7 +14,7 @@
 // Strring.raw 메소드 이용해서 .넣기
 {
     const name = "JDH"
-    let temp = `My name is "\"
+    let temp = String.raw`My name is \"
     ${name}`
     console.log(temp)
 }
