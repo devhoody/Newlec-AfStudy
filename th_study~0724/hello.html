@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 누르면 사진 나오기</title>
+    <style>
+        /* 사진 영역을 감싸는 div 요소에 스타일을 적용합니다. */
+        #사진영역 {
+          display: none; /* 처음에는 사진이 보이지 않도록 설정합니다. */
+        }
+      </style>
+    <script>
+        // window.addEventListener("load", function() {
+        // var push = document.querySelector("#hello");
+    
+        // // 함수
+        // push.onclick = function(){
+        // //var push = document.querySelector("#hello")
+
+        
+        // var result = alert("안녕하세요");
+        // document.getElementById("hello").value = result;
+
+        //} });
+
+
+        window.addEventListener("load", function() {
+            var test = document.querySelector("#testmj");  //div부분 document
+            
+            var hello = test.querySelector("#push");
+            var hello2 = test.querySelector("#push2");
+
+            var countInput = test.querySelector("#count");
+
+            hello.onclick = function(){
+                alert("지켜보고있따아");
+            }
+            hello2.onclick = function(){
+                alert("어디가");
+            }
+
+            var count = 0;
+            countInput.onclick = function(){
+                count++;
+                console.log(count);
+            }
+        });
+
+
+
+
+    </script>
+</head>
+<body>
+    
+    <div id = "testmj">
+        <button id="push"><img src="../th_study/watchyouu.jpg" alt="보여줄 사진"></button>
+        <button id="push2"><img src="../th_study/watchyou.jpg" alt="보여줄 사진"></button>
+        <!-- <button id ="count">1씩 증가</button> -->
+
+
+
+    </div>
+</body>
+</html>

@@ -1,16 +1,81 @@
 {
     // 대훈
     // 1. class 를 사용해서 Exam 만들고 -> 국어, 영어, 수학, 컴퓨터 점수 초기화
+    class Exam{
+        #kor;
+        #eng;
+        #math;
+        #com;
+        constructor(kor=0,eng=0,math=0,com=0){
+            this.#kor = kor;
+            this.#eng = eng;
+            this.#math = math;
+            this.#com = com;
+        }
+        avg(){
+            return (this.#math+this.#com)/2;
+        }
+        get math(){
+            return this.#math;
+        }
+        set math(value){
+            this.#math=value;
+        }  
+        get com(){
+            return this.#com;
+        }
+        set com(value){
+            this.#com=value;
+        }  
+    }
+
     // 2. private 변수 사용해서 은닉화 하기
+
     // 3. 수학성적과 컴퓨터 성적의 합이 100, 평균이 50이 나오게 객체 생성하기
+    let exam = new Exam(0,0,40,60);
+    console.log(exam.avg());
+
+
     // 4. getter 와, setter 를 활용해서 수학과 컴퓨터의 성적이 제대로 들어갔는지 확인해보기
+    console.log(exam.math);
+    console.log(exam.com);
+
 }
 
 {
     // 태호
     // 1.User 클래스에 name, age 변수를 은닉화하여 선언하세요.
+    class User{
+        #name;
+        #age;
     // 2.User 클래스에 name, age를 매개변수로 갖는 생성자 함수를 선언하세요.
+        constructor(name=0,age=0){
+            this.#name = name;
+            this.#age = age;
+        }
     // 3.User 클래스에 Age의 getter(getAge), setter(setAge)를 만들어주세요.
+        get age(){
+            return this.#age;
+        }
+        set age(value){
+            if(value>100){
+                console.log("나이는 100을 초과할 수 없습니다.");
+                return;
+            }
+            this.#age=value;
+        }  
+    }
+
+    let user1 = new User("mj",34);
+    console.log(user1.age);
+    user1.age++;
+    user1.age = 150;
+    // user1.age = 50;
+
+
+
+
+
     // 4. setAge에서 100살을 초과하여 입력할 경우, "나이는 100살을 초과할 수 없습니다." 를 출력하고, age가 재설정되지 않도록 setAge를 수정해주세요.
     // 5. new를 이용해 User객체에 "본인이름", "본인나이"를 대입한 변수 user1을 만들고, getAge를 이용하여 본인 나이를 출력해보고, setAge를 이용해 150살을 입력했을때 결과를 확인하세요~!
     // 코드를 여기에 작성하세요.
@@ -96,10 +161,10 @@
 
 	// Q. 아래 4개 콘솔에 출력되는 내용이 어떻게 될까요?? 
 
-    console.log(exam.hasOwnProperty('total'));
-    console.log(exam.__proto__.hasOwnProperty('total'));
-    console.log(exam2.hasOwnProperty('total'));
-    console.log(exam2.__proto__.hasOwnProperty('total'));
+    // console.log(exam.hasOwnProperty('total')); f
+    // console.log(exam.__proto__.hasOwnProperty('total'));t
+    // console.log(exam2.hasOwnProperty('total'));f
+    // console.log(exam2.__proto__.hasOwnProperty('total'));t
 
 }
 
@@ -149,22 +214,22 @@
     // Q) 다음 콘솔창에 무엇이 출력될까요?
 
     console.log(exam1.total());
-    // A1)
+    // A1) 40     
 
     console.log(typeof exam1, typeof Exam, typeof NewlecExam);
-    // A2)
+    // A2) obj, func, func.
 
     console.log(exam instanceof Exam, exam1 instanceof Exam);
-    // A3)
+    // A3) t, t
 
     console.log(exam instanceof NewlecExam, exam1 instanceof NewlecExam);
-    // A4)
+    // A4) f, t
 
     console.log(Object.hasOwn(exam1.__proto__, "total"));
-    // A5)
+    // A5) t
 
     console.log(Object.hasOwn(exam1, "total"));
-    // A6)
+    // A6) f
 }
 
 {
@@ -187,14 +252,29 @@
         }
 
         avg(){
-                // 코드 작성 부분
+            return (this.#kor+this.#eng+this.#math)/3; // 코드 작성 부분
         }
     }
     // Exam 을 상속받는 NewExam을 생성하되, com과목을 추가해주세요.
-    class NewExam...........{
+    class NewExam extends Exam{
+        #com;
 
+        constructor(kor, eng, math, com){
+            super(kor,eng,math);
+            this.#com = com;
+        }
 
+        total(){
+            return super.total()+this.#com;
+        }
+
+        avg(){
+            return (this.total()/4);
+        }
     }
+    let exam5 = new NewExam(50,50,50,50);
+    console.log(exam5.total());
+    console.log(exam5.avg());
 
     // NewExam의 total()과 avg()를 구해서 출력해주세요.
     // 각 과목의 값은 맘대로 설정해서 쓰세요~

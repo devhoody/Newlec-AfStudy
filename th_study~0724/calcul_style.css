@@ -1,0 +1,35 @@
+body {
+    font-family: 'Neo둥근모 pro'
+}
+
+#wrap {
+    width: 200px;
+    height: 275px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #6dddb6;
+    padding-top: 10px;
+}
+
+h1 {
+    color: #ffffff;
+    background-color: #3D85E7;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+}
+
+form>p:nth-child(3) {           /*form요소 안의 세번째 p*/
+    background: #3DC0DE;
+    width: 180px;
+    height: 60px;
+    margin: 0 auto;
+    color: #000;
+}
+
+form>p:nth-child(4)> {           /*form요소 안의 네번째 p*/
+    background: #000;
+    color: #ffffff;
+    font-size: 16px;
+}

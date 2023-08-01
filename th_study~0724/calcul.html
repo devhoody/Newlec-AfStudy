@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calcul_style.css">    
+<script>
+    // 덧셈 함수
+    function add(){
+        var num1 = document.getElementById("num1").value;
+        /*
+        document는 JavaScript에서 HTML 문서(Document Object Model 또는 DOM)를 나타내는 객체입니다.
+        따라서 document 객체는 현재 로드된 웹 페이지 전체를 나타내며, 
+        웹 페이지에 포함된 모든 HTML 요소를 다루는데 사용됩니다. 
+        getElementById()와 같은 메서드를 사용하여 웹 페이지에서 특정 요소를 찾을 수 있고, 
+        해당 요소의 내용이나 속성을 변경하거나 값을 읽어올 수 있습니다.
+        */
+
+        /*: num1 변수에는 id 속성이 "num1"인 HTML 요소의 값을 가져와서 저장합니다. 
+        이 요소는 일반적으로 입력란(input)이거나 텍스트 영역(textarea)일 것으로 예상됩니다.*/
+        var num2 = document.getElementById("num2").value;
+        
+        var result = parseInt(num1) + parseInt(num2);
+        document.getElementById("calc").value = result;
+        /*
+        결과 값을 id 속성이 "sum"인 HTML 요소의 값으로 설정합니다. 
+        이를 통해 덧셈 결과가 화면에 나타납니다.
+        */
+    }
+
+    // 뺄셈 함수
+    function sub(){
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+
+        var result = parseInt(num1) - parseInt(num2);
+        document.getElementById("calc").value = result;
+            /*
+        결과 값을 id 속성이 "sum"인 HTML 요소의 값으로 설정합니다. 
+        이를 통해 뺄셈 결과가 화면에 나타납니다.
+        */
+    }
+
+    // 곱셈 함수
+    function multi(){
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+
+        var result = parseInt(num1)*parseInt(num2);
+        document.getElementById("calc").value = result;
+    }
+
+    // 나눗셈 함수
+    function divi(){
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+
+        var result = parseInt(num1)/parseInt(num2);
+        document.getElementById("calc").value = result;
+    }
+
+
+
+
+
+</script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>calculator</h1>
+        <form>
+            <p>num 1: <input type="text" id="num1"></p>
+            <p>num 2: <input type="text" id="num2"></p>
+            <p>result: <input type="text" id="calc"></p>
+            <p>
+                <input type="button" value="+ =" onclick="add()">
+                <input type="button" value="- =" onclick="sub()">
+                <input type="button" value="* =" onclick="multi()">
+                <input type="button" value="/ =" onclick="divi()">
+            </p>
+        </form>
+    </div>
+</body>
+</html>
