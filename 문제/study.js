@@ -81,7 +81,7 @@ console.log('8월 1일 문제---------->');
 
     }
 
-    let exam = new Exam(0, 0, 30, 70);
+    let exam = new Exam(30, 70);
     
     console.log("kor:", exam.kor);
     console.log("eng:", exam.eng);
