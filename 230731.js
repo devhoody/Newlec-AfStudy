@@ -37,7 +37,7 @@
         var b = ["you", "are"];
 
 
-    // 여기에 코드 적기~
+    // 여기 에 코드 적기~
     var max =Math.max(...numbers);
     var min =Math.min.apply(null,numbers);// 가져올 함수가 없으니깐 null,undefined를 넣고 다음을 넣어서
     var min =Math.min.call(undefined,...numbers);
