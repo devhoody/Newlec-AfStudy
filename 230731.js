@@ -81,42 +81,42 @@
 { // 민아 문제풀이
     // 대훈
     //1. 매개변수 받지 않고 두개의 인자의 합을 구하는 함수 만들어보기
-
-    let sum1 = function(){
-            let x = arguments[0];
-            let y = arguments[1];
-            console.log(x + y);
-    }
-    console.log(1, 2);
-
+        {
+            let sum1 = function () {
+                let x = arguments[0];
+                let y = arguments[1];
+                console.log(x + y);
+            }
+            console.log(1, 2);
+        }
     //2. 기존 매개변수는 그대로 두고 인자를 추가해서 함수를 출력할때 덧셈의 합이 10이 되도록 해보기
     let sum2 = function(x, y, ...kk){
         console.log(x+y+kk[0]+kk[1]);
     }
     sum2(1, 2, 3, 4);
+        {
+            //3. 숫자배열, 문자배열 각각 만들어서 하나의 1차배열로 한번에 출력하기
+            let str = ['깃허브', '무서워'];
+            let nums = [1, 3, 5, ...str];
 
-    //3. 숫자배열, 문자배열 각각 만들어서 하나의 1차배열로 한번에 출력하기
-    let str = ['깃허브','무서워'];
-    let nums = [1, 3, 5, ...str];
-
-    let nums1 = [1, 3, 5];
-    let str1 = ['깃허브','무서워'];
+            let nums1 = [1, 3, 5];
+            let str1 = ['깃허브', '무서워'];
     
-    console.log(str)
+            console.log(str)
     
-    let numsStr = nums1.concat(str1);
-    console.log(numsStr);
+            let numsStr = nums1.concat(str1);
+            console.log(numsStr);
 
-    nums1.push.apply(nums1, str1);
-    console.log(nums1);
+            nums1.push.apply(nums1, str1);
+            console.log(nums1);
 
-    let sum=function(){
-        let a=arguments[0];
-        let b=arguments[1];
-        console.log(a+b);
-    }
-    sum(1,2)
-    
+            let sum = function () {
+                let a = arguments[0];
+                let b = arguments[1];
+                console.log(a + b);
+            }
+            sum(1, 2)
+        }
     //2. 기존 매개변수는 그대로 두고 인자를 추가해서 함수를 출력할때 덧셈의 합이 10이 되도록 해보기
     let sum1=function(x,y,...aa){
         console.log(aa[0]+aa[1]+aa[2])
@@ -450,42 +450,43 @@
 { // 민아 문제풀이
     // 대훈
     //1. 매개변수 받지 않고 두개의 인자의 합을 구하는 함수 만들어보기
+        {
+            let sum1 = function () {
+                let x = arguments[0];
+                let y = arguments[1];
+                console.log(x + y);
+            }
+            console.log(1, 2);
 
-    let sum1 = function(){
-            let x = arguments[0];
-            let y = arguments[1];
-            console.log(x + y);
-    }
-    console.log(1, 2);
+            //2. 기존 매개변수는 그대로 두고 인자를 추가해서 함수를 출력할때 덧셈의 합이 10이 되도록 해보기
+            let sum2 = function (x, y, ...kk) {
+                console.log(x + y + kk[0] + kk[1]);
+            }
+            sum2(1, 2, 3, 4);
+        }
+        {
+            //3. 숫자배열, 문자배열 각각 만들어서 하나의 1차배열로 한번에 출력하기
+            let str = ['깃허브', '무서워'];
+            let nums = [1, 3, 5, ...str];
 
-    //2. 기존 매개변수는 그대로 두고 인자를 추가해서 함수를 출력할때 덧셈의 합이 10이 되도록 해보기
-    let sum2 = function(x, y, ...kk){
-        console.log(x+y+kk[0]+kk[1]);
-    }
-    sum2(1, 2, 3, 4);
-
-    //3. 숫자배열, 문자배열 각각 만들어서 하나의 1차배열로 한번에 출력하기
-    let str = ['깃허브','무서워'];
-    let nums = [1, 3, 5, ...str];
-
-    let nums1 = [1, 3, 5];
-    let str1 = ['깃허브','무서워'];
+            let nums1 = [1, 3, 5];
+            let str1 = ['깃허브', '무서워'];
     
-    console.log(str)
+            console.log(str)
     
-    let numsStr = nums1.concat(str1);
-    console.log(numsStr);
+            let numsStr = nums1.concat(str1);
+            console.log(numsStr);
 
-    nums1.push.apply(nums1, str1);
-    console.log(nums1);
+            nums1.push.apply(nums1, str1);
+            console.log(nums1);
 
-    let sum=function(){
-        let a=arguments[0];
-        let b=arguments[1];
-        console.log(a+b);
-    }
-    sum(1,2)
-    
+            let sum = function () {
+                let a = arguments[0];
+                let b = arguments[1];
+                console.log(a + b);
+            }
+            sum(1, 2)
+        }
     //2. 기존 매개변수는 그대로 두고 인자를 추가해서 함수를 출력할때 덧셈의 합이 10이 되도록 해보기
     let sum1=function(x,y,...aa){
         console.log(aa[0]+aa[1]+aa[2])
